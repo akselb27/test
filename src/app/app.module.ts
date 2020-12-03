@@ -1,3 +1,4 @@
+import { AppComponent } from './app.component';
 import { SummaryPipe } from './summary.pipe';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -10,13 +11,15 @@ import { CoursesComponent } from './courses/courses.component';
 import { CourseComponent } from './courses/course/course.component';
 import { CoursesService } from './courses/courses.service';
 
+
 @NgModule({
-  declarations: [
+  declarations: [	
+    AppComponent,
     CourseComponent,
     CoursesComponent,
     SummaryPipe,
-    FavouriteComponent   
-  ],
+    FavouriteComponent,
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -25,6 +28,6 @@ import { CoursesService } from './courses/courses.service';
   providers: [
     CoursesService
   ],
-  bootstrap: [FavouriteComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
